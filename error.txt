@@ -1,0 +1,138 @@
+jetson@jetson-desktop:~/jetson_pkgs$ pip install ./onnxruntime_gpu-1.8.0-cp38-cp38-linux_aarch64.whl
+Defaulting to user installation because normal site-packages is not writeable
+ERROR: Exception:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/pip/_internal/cli/base_command.py", line 180, in _main
+    status = self.run(options, args)
+  File "/usr/local/lib/python3.8/site-packages/pip/_internal/cli/req_command.py", line 204, in wrapper
+    return func(self, options, args)
+  File "/usr/local/lib/python3.8/site-packages/pip/_internal/commands/install.py", line 269, in run
+    session = self.get_default_session(options)
+  File "/usr/local/lib/python3.8/site-packages/pip/_internal/cli/req_command.py", line 77, in get_default_session
+    self._session = self.enter_context(self._build_session(options))
+  File "/usr/local/lib/python3.8/site-packages/pip/_internal/cli/req_command.py", line 87, in _build_session
+    session = PipSession(
+  File "/usr/local/lib/python3.8/site-packages/pip/_internal/network/session.py", line 275, in __init__
+    self.headers["User-Agent"] = user_agent()
+  File "/usr/local/lib/python3.8/site-packages/pip/_internal/network/session.py", line 132, in user_agent
+    linux_distribution = distro.linux_distribution()  # type: ignore
+  File "/usr/local/lib/python3.8/site-packages/pip/_vendor/distro.py", line 125, in linux_distribution
+    return _distro.linux_distribution(full_distribution_name)
+  File "/usr/local/lib/python3.8/site-packages/pip/_vendor/distro.py", line 681, in linux_distribution
+    self.version(),
+  File "/usr/local/lib/python3.8/site-packages/pip/_vendor/distro.py", line 741, in version
+    self.lsb_release_attr('release'),
+  File "/usr/local/lib/python3.8/site-packages/pip/_vendor/distro.py", line 903, in lsb_release_attr
+    return self._lsb_release_info.get(attribute, '')
+  File "/usr/local/lib/python3.8/site-packages/pip/_vendor/distro.py", line 556, in __get__
+    ret = obj.__dict__[self._fname] = self._f(obj)
+  File "/usr/local/lib/python3.8/site-packages/pip/_vendor/distro.py", line 1014, in _lsb_release_info
+    stdout = subprocess.check_output(cmd, stderr=devnull)
+  File "/usr/local/lib/python3.8/subprocess.py", line 415, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/usr/local/lib/python3.8/subprocess.py", line 516, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '('lsb_release', '-a')' returned non-zero exit status 1.
+Traceback (most recent call last):
+  File "/home/jetson/.local/bin/pip", line 11, in <module>
+    sys.exit(main())
+  File "/usr/local/lib/python3.8/site-packages/pip/_internal/cli/main.py", line 71, in main
+    return command.main(cmd_args)
+  File "/usr/local/lib/python3.8/site-packages/pip/_internal/cli/base_command.py", line 104, in main
+    return self._main(args)
+  File "/usr/local/lib/python3.8/site-packages/pip/_internal/cli/base_command.py", line 221, in _main
+    self.handle_pip_version_check(options)
+  File "/usr/local/lib/python3.8/site-packages/pip/_internal/cli/req_command.py", line 143, in handle_pip_version_check
+    session = self._build_session(
+  File "/usr/local/lib/python3.8/site-packages/pip/_internal/cli/req_command.py", line 87, in _build_session
+    session = PipSession(
+  File "/usr/local/lib/python3.8/site-packages/pip/_internal/network/session.py", line 275, in __init__
+    self.headers["User-Agent"] = user_agent()
+  File "/usr/local/lib/python3.8/site-packages/pip/_internal/network/session.py", line 132, in user_agent
+    linux_distribution = distro.linux_distribution()  # type: ignore
+  File "/usr/local/lib/python3.8/site-packages/pip/_vendor/distro.py", line 125, in linux_distribution
+    return _distro.linux_distribution(full_distribution_name)
+  File "/usr/local/lib/python3.8/site-packages/pip/_vendor/distro.py", line 681, in linux_distribution
+    self.version(),
+  File "/usr/local/lib/python3.8/site-packages/pip/_vendor/distro.py", line 741, in version
+    self.lsb_release_attr('release'),
+  File "/usr/local/lib/python3.8/site-packages/pip/_vendor/distro.py", line 903, in lsb_release_attr
+    return self._lsb_release_info.get(attribute, '')
+  File "/usr/local/lib/python3.8/site-packages/pip/_vendor/distro.py", line 556, in __get__
+    ret = obj.__dict__[self._fname] = self._f(obj)
+  File "/usr/local/lib/python3.8/site-packages/pip/_vendor/distro.py", line 1014, in _lsb_release_info
+    stdout = subprocess.check_output(cmd, stderr=devnull)
+  File "/usr/local/lib/python3.8/subprocess.py", line 415, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/usr/local/lib/python3.8/subprocess.py", line 516, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '('lsb_release', '-a')' returned non-zero exit status 1.
+jetson@jetson-desktop:~/jetson_pkgs$ pip install ./tensorrt-8.2.0.6-cp38-none-linux_aarch64.whl
+Defaulting to user installation because normal site-packages is not writeable
+ERROR: Exception:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/pip/_internal/cli/base_command.py", line 180, in _main
+    status = self.run(options, args)
+  File "/usr/local/lib/python3.8/site-packages/pip/_internal/cli/req_command.py", line 204, in wrapper
+    return func(self, options, args)
+  File "/usr/local/lib/python3.8/site-packages/pip/_internal/commands/install.py", line 269, in run
+    session = self.get_default_session(options)
+  File "/usr/local/lib/python3.8/site-packages/pip/_internal/cli/req_command.py", line 77, in get_default_session
+    self._session = self.enter_context(self._build_session(options))
+  File "/usr/local/lib/python3.8/site-packages/pip/_internal/cli/req_command.py", line 87, in _build_session
+    session = PipSession(
+  File "/usr/local/lib/python3.8/site-packages/pip/_internal/network/session.py", line 275, in __init__
+    self.headers["User-Agent"] = user_agent()
+  File "/usr/local/lib/python3.8/site-packages/pip/_internal/network/session.py", line 132, in user_agent
+    linux_distribution = distro.linux_distribution()  # type: ignore
+  File "/usr/local/lib/python3.8/site-packages/pip/_vendor/distro.py", line 125, in linux_distribution
+    return _distro.linux_distribution(full_distribution_name)
+  File "/usr/local/lib/python3.8/site-packages/pip/_vendor/distro.py", line 681, in linux_distribution
+    self.version(),
+  File "/usr/local/lib/python3.8/site-packages/pip/_vendor/distro.py", line 741, in version
+    self.lsb_release_attr('release'),
+  File "/usr/local/lib/python3.8/site-packages/pip/_vendor/distro.py", line 903, in lsb_release_attr
+    return self._lsb_release_info.get(attribute, '')
+  File "/usr/local/lib/python3.8/site-packages/pip/_vendor/distro.py", line 556, in __get__
+    ret = obj.__dict__[self._fname] = self._f(obj)
+  File "/usr/local/lib/python3.8/site-packages/pip/_vendor/distro.py", line 1014, in _lsb_release_info
+    stdout = subprocess.check_output(cmd, stderr=devnull)
+  File "/usr/local/lib/python3.8/subprocess.py", line 415, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/usr/local/lib/python3.8/subprocess.py", line 516, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '('lsb_release', '-a')' returned non-zero exit status 1.
+Traceback (most recent call last):
+  File "/home/jetson/.local/bin/pip", line 11, in <module>
+    sys.exit(main())
+  File "/usr/local/lib/python3.8/site-packages/pip/_internal/cli/main.py", line 71, in main
+    return command.main(cmd_args)
+  File "/usr/local/lib/python3.8/site-packages/pip/_internal/cli/base_command.py", line 104, in main
+    return self._main(args)
+  File "/usr/local/lib/python3.8/site-packages/pip/_internal/cli/base_command.py", line 221, in _main
+    self.handle_pip_version_check(options)
+  File "/usr/local/lib/python3.8/site-packages/pip/_internal/cli/req_command.py", line 143, in handle_pip_version_check
+    session = self._build_session(
+  File "/usr/local/lib/python3.8/site-packages/pip/_internal/cli/req_command.py", line 87, in _build_session
+    session = PipSession(
+  File "/usr/local/lib/python3.8/site-packages/pip/_internal/network/session.py", line 275, in __init__
+    self.headers["User-Agent"] = user_agent()
+  File "/usr/local/lib/python3.8/site-packages/pip/_internal/network/session.py", line 132, in user_agent
+    linux_distribution = distro.linux_distribution()  # type: ignore
+  File "/usr/local/lib/python3.8/site-packages/pip/_vendor/distro.py", line 125, in linux_distribution
+    return _distro.linux_distribution(full_distribution_name)
+  File "/usr/local/lib/python3.8/site-packages/pip/_vendor/distro.py", line 681, in linux_distribution
+    self.version(),
+  File "/usr/local/lib/python3.8/site-packages/pip/_vendor/distro.py", line 741, in version
+    self.lsb_release_attr('release'),
+  File "/usr/local/lib/python3.8/site-packages/pip/_vendor/distro.py", line 903, in lsb_release_attr
+    return self._lsb_release_info.get(attribute, '')
+  File "/usr/local/lib/python3.8/site-packages/pip/_vendor/distro.py", line 556, in __get__
+    ret = obj.__dict__[self._fname] = self._f(obj)
+  File "/usr/local/lib/python3.8/site-packages/pip/_vendor/distro.py", line 1014, in _lsb_release_info
+    stdout = subprocess.check_output(cmd, stderr=devnull)
+  File "/usr/local/lib/python3.8/subprocess.py", line 415, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/usr/local/lib/python3.8/subprocess.py", line 516, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '('lsb_release', '-a')' returned non-zero exit status 1.
